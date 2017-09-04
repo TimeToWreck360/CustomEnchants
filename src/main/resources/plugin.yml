@@ -1,0 +1,7 @@
+name: CustomEnchants
+main: plugin.dumpie.customenchants.CustomEnchants
+author: AsianDumplings
+version: 1.0
+commands:
+  ce:
+    description: Test command.

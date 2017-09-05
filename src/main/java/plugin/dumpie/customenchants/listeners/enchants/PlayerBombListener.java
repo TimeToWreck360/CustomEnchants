@@ -1,14 +1,11 @@
 package plugin.dumpie.customenchants.listeners.enchants;
 
-import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.potion.PotionEffect;
-import org.bukkit.potion.PotionEffectType;
 import plugin.dumpie.customenchants.CustomEnchants;
 import plugin.dumpie.customenchants.enchantment.Application;
 import plugin.dumpie.customenchants.enchantment.CustomEnchantment;
@@ -38,7 +35,6 @@ public class PlayerBombListener implements Listener
         CustomEnchantment bomb = instance.getEnchants().getEnchantFromString("Bomb");
         if(bomb == null) return;
         if(!instance.getEnchants().hasEnchant(chestplate, bomb)) return;
-
         loc.getWorld().createExplosion(loc, 5F);
     }
 }

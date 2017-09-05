@@ -5,8 +5,6 @@ import org.bukkit.attribute.Attribute;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.potion.PotionEffect;
-import org.bukkit.potion.PotionEffectType;
 import plugin.dumpie.customenchants.CustomEnchants;
 import plugin.dumpie.customenchants.enchantment.Application;
 import plugin.dumpie.customenchants.enchantment.CustomEnchantment;
@@ -40,7 +38,7 @@ public class TankListener implements Listener
             if(!newArmor.hasItemMeta()) return;
             if(!newArmor.getItemMeta().hasLore()) return;
             if(!instance.getEnchants().hasEnchant(newArmor, tank)) return;
-            e.getPlayer().getAttribute(Attribute.GENERIC_MAX_HEALTH).setBaseValue(30);
+            e.getPlayer().getAttribute(Attribute.GENERIC_MAX_HEALTH).setBaseValue(26);
             return;
         }
 
@@ -50,7 +48,7 @@ public class TankListener implements Listener
             if(!oldArmor.getItemMeta().hasLore()) return;
             if(!instance.getEnchants().hasEnchant(oldArmor, tank)) return;
 
-            if(e.getPlayer().getAttribute(Attribute.GENERIC_MAX_HEALTH).getValue() == 30)
+            if(e.getPlayer().getAttribute(Attribute.GENERIC_MAX_HEALTH).getValue() == 26)
                 e.getPlayer().getAttribute(Attribute.GENERIC_MAX_HEALTH).setBaseValue(20);
         }
     }

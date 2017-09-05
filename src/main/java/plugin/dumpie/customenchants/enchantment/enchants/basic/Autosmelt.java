@@ -1,8 +1,8 @@
 package plugin.dumpie.customenchants.enchantment.enchants.basic;
 
 import org.bukkit.ChatColor;
-import plugin.dumpie.customenchants.enchantment.CustomEnchantment;
 import plugin.dumpie.customenchants.enchantment.Application;
+import plugin.dumpie.customenchants.enchantment.CustomEnchantment;
 import plugin.dumpie.customenchants.enchantment.Tier;
 
 public class Autosmelt implements CustomEnchantment

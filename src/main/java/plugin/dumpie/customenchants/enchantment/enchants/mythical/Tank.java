@@ -1,4 +1,4 @@
-package plugin.dumpie.customenchants.enchantment.enchants.abnormal;
+package plugin.dumpie.customenchants.enchantment.enchants.mythical;
 
 import org.bukkit.ChatColor;
 import plugin.dumpie.customenchants.enchantment.Application;
@@ -34,6 +34,6 @@ public class Tank implements CustomEnchantment
     @Override
     public Tier getTier()
     {
-        return Tier.ABNORMAL;
+        return Tier.MYTHICAL;
     }
 }

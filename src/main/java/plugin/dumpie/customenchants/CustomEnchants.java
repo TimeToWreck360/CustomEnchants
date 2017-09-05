@@ -16,6 +16,7 @@ import plugin.dumpie.customenchants.enchantment.enchants.mythical.Resurrection;
 import plugin.dumpie.customenchants.listeners.DropEnchantOnItem;
 import plugin.dumpie.customenchants.listeners.EnchantShardOpen;
 import plugin.dumpie.customenchants.listeners.armor.ArmorEquipListener;
+import plugin.dumpie.customenchants.listeners.armor.ArmorUneqipListener;
 import plugin.dumpie.customenchants.listeners.enchants.*;
 
 public class CustomEnchants extends JavaPlugin
@@ -32,7 +33,7 @@ public class CustomEnchants extends JavaPlugin
         enchantManager = new EnchantManager(this);
         commandManager = new CommandManager(this);
 
-        registerEvents(this, new EnchantShardOpen(this), new DropEnchantOnItem(this), new ArmorEquipListener(this));
+        registerEvents(this, new EnchantShardOpen(this), new DropEnchantOnItem(this), new ArmorEquipListener(this), new ArmorUneqipListener(this));
         registerEnchantEffects(this, new AutosmeltListener(this), new PlayerBombListener(this),
                 new LifestealListener(this), new ScavengerListener(this), new NightgoggleListener(this), new TankListener(this));
         registerEnchants();

@@ -11,6 +11,8 @@ import plugin.dumpie.customenchants.CustomEnchants;
 import plugin.dumpie.customenchants.enchantment.Application;
 import plugin.dumpie.customenchants.enchantment.CustomEnchantment;
 
+import java.util.Random;
+
 public class DodgeListener implements Listener
 {
     private CustomEnchants instance;
@@ -40,10 +42,13 @@ public class DodgeListener implements Listener
         if(dodge == null) return;
         if(!instance.getEnchants().hasEnchant(p.getInventory().getBoots(), dodge)) return;
 
-        double chance = Math.random();
-        if(chance <= 0.33)
-            p.setHealth(p.getHealth());
+        Random r = new Random();
+        int chance = r.nextInt(100);
+
+        if(chance <= 0.20)
+        {
             p.sendMessage(ChatColor.GREEN + "You dodged the incoming attack!");
             e.setCancelled(true);
+        }
     }
 }

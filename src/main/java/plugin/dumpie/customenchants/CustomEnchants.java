@@ -38,7 +38,8 @@ public class CustomEnchants extends JavaPlugin
         registerEvents(this, new EnchantShardOpen(this), new DropEnchantOnItem(this), new ArmorEquipListener(this), new ArmorUneqipListener(this));
         registerEnchantEffects(this, new AutosmeltListener(this), new PlayerBombListener(this),
                 new LifestealListener(this), new ScavengerListener(this), new NightgoggleListener(this), new TankListener(this),
-                new FlashListener(this), new FireshieldListener(this));
+                new FlashListener(this), new BerserkerListener(this), new FireshieldListener(this),
+                new DodgeListener(this), new OverheatListener(this));
         registerEnchants();
 
         getCommand("ce").setExecutor(commandManager);

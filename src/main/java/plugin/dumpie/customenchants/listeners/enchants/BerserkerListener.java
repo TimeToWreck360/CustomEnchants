@@ -32,11 +32,11 @@ public class BerserkerListener implements Listener
         CustomEnchantment berserker = instance.getEnchants().getEnchantFromString("Berserker");
 
         if(weapon == null || weapon.getType() == Material.AIR) return;
-        if(Application.getType(weapon.getType()) != Application.SWORD) return;
+        if(Application.getType(weapon.getType()) != Application.SWORD && Application.getType(weapon.getType()) != Application.AXE) return;
         if(!weapon.hasItemMeta()) return;
         if(!weapon.getItemMeta().hasLore()) return;
         if(!instance.getEnchants().hasEnchant(weapon, berserker)) return;
 
-        killer.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 20 * 3, 1));
+        killer.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 20 * 5, 1));
     }
 }

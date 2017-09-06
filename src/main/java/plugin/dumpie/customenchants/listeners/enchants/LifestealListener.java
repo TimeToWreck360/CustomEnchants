@@ -11,6 +11,8 @@ import plugin.dumpie.customenchants.CustomEnchants;
 import plugin.dumpie.customenchants.enchantment.Application;
 import plugin.dumpie.customenchants.enchantment.CustomEnchantment;
 
+import java.util.Random;
+
 public class LifestealListener implements Listener
 {
     private CustomEnchants instance;
@@ -37,8 +39,9 @@ public class LifestealListener implements Listener
         if(!instance.getEnchants().hasEnchant(weapon, lifesteal)) return;
         if(killer.getHealth() == killer.getAttribute(Attribute.GENERIC_MAX_HEALTH).getValue()) return;
 
-        double chance = Math.random();
-        if(chance <= 0.5)
+        Random r = new Random();
+        int chance = r.nextInt(100);
+        if(chance <= 0.25)
             killer.setHealth(killer.getHealth() + 4);
     }
 }

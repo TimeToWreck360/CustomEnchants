@@ -31,8 +31,8 @@ public class FireshieldListener implements Listener
         CustomEnchantment fireshield = instance.getEnchants().getEnchantFromString("Fireshield");
         if(fireshield == null) return;
 
-        if(Application.getType(oldArmor.getType()) != Application.BOOTS && oldArmor.getType() != Material.AIR) return;
-        if(Application.getType(newArmor.getType()) != Application.BOOTS && newArmor.getType() != Material.AIR) return;
+        if(Application.getType(oldArmor.getType()) != Application.CHESTPLATE && oldArmor.getType() != Material.AIR) return;
+        if(Application.getType(newArmor.getType()) != Application.CHESTPLATE && newArmor.getType() != Material.AIR) return;
 
         if(oldArmor.getType() == Material.AIR)
         {

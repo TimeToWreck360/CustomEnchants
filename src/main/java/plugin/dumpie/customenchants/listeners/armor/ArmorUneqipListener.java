@@ -38,8 +38,10 @@ public class ArmorUneqipListener implements Listener
 
         for(ItemStack armor : p.getInventory().getArmorContents())
         {
-            if(armor == null || armor.getType() == Material.AIR) return;
-            Bukkit.getServer().getPluginManager().callEvent(new ArmorEquipEvent(armor, new ItemStack(Material.AIR), p));
+            if(armor != null && armor.getType() != Material.AIR)
+            {
+                Bukkit.getServer().getPluginManager().callEvent(new ArmorEquipEvent(armor, new ItemStack(Material.AIR), p));
+            }
         }
     }
 }

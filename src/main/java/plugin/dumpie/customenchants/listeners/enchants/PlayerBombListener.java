@@ -10,6 +10,8 @@ import plugin.dumpie.customenchants.CustomEnchants;
 import plugin.dumpie.customenchants.enchantment.Application;
 import plugin.dumpie.customenchants.enchantment.CustomEnchantment;
 
+import java.util.Random;
+
 public class PlayerBombListener implements Listener
 {
     private CustomEnchants instance;
@@ -35,6 +37,11 @@ public class PlayerBombListener implements Listener
         CustomEnchantment bomb = instance.getEnchants().getEnchantFromString("Bomb");
         if(bomb == null) return;
         if(!instance.getEnchants().hasEnchant(chestplate, bomb)) return;
-        loc.getWorld().createExplosion(loc, 5F);
+
+        Random r = new Random();
+        int chance = r.nextInt(100);
+
+        if(chance <= 10)
+            loc.getWorld().createExplosion(loc, 1F);
     }
 }
